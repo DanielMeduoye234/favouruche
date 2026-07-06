@@ -2,6 +2,7 @@ import { useState } from "react";
 import {
   ArrowRight,
   AtSign,
+  Award,
   BarChart3,
   BriefcaseBusiness,
   CalendarDays,
@@ -9,126 +10,202 @@ import {
   Clock3,
   Download,
   ExternalLink,
-  Headphones,
+  GraduationCap,
   Instagram,
   Mail,
   MapPin,
+  Megaphone,
   MessageCircle,
+  PenLine,
   Phone,
+  Search,
   Send,
   ShieldCheck,
-  Sparkles
+  Sparkles,
+  Users
 } from "lucide-react";
 
 const contactEmail = "Favourgabby214@gmail.com";
-const contactPhone = "+2349032427242";
-const displayPhone = "+234 903 242 7242";
-const linkedInUrl = "http://linkedin.com/in/favouruchegabriel";
-const resumeHref = "/assets/SMM - Favour Uche-Gabriel.pdf";
+const contactPhone = "+2349032407242";
+const displayPhone = "+234 903 240 7242";
+const linkedInUrl = "https://www.linkedin.com/in/favouruchegabriel";
+const resumeHref = "/assets/Favour Uche-Gabriel - Master Resume.pdf";
 const photoSrc = "/assets/pic.jpeg";
+
+const roleTitle = "Content, Communications & Executive Support Specialist";
 
 const services = [
   {
+    icon: PenLine,
+    title: "Content strategy & copywriting",
+    text: "Content strategies, customer personas, and clear copy that positions a brand and keeps it consistent."
+  },
+  {
+    icon: Megaphone,
+    title: "Social media management & growth",
+    text: "Campaign planning, posts, short-form video, and ad copy that turn attention into engagement and leads."
+  },
+  {
+    icon: Search,
+    title: "SEO writing & brand storytelling",
+    text: "SEO-focused articles, blog posts, and brand narratives that grow visibility and traffic across platforms."
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Executive & administrative support",
+    text: "Executive assistance, recruitment coordination, and reliable follow-up that keeps leaders and projects on track."
+  },
+  {
     icon: CalendarDays,
-    title: "Content calendars",
-    text: "Weekly plans, caption drafts, publishing checklists, and timing notes for consistent brand activity."
+    title: "Calendar & schedule management",
+    text: "Calendars, meetings, reminders, and appointments handled so nothing important slips through."
   },
   {
-    icon: MessageCircle,
-    title: "Community replies",
-    text: "Comment moderation, DM triage, friendly answers, and escalation notes for issues that need a manager."
-  },
-  {
-    icon: Headphones,
-    title: "Customer care",
-    text: "Order updates, complaint handling, follow-up messages, and scripts that keep conversations clear."
-  },
-  {
-    icon: BarChart3,
-    title: "Performance reports",
-    text: "Simple campaign summaries with what worked, what changed, and what should happen next."
+    icon: Users,
+    title: "Client & stakeholder relations",
+    text: "Lead nurturing, complaint handling, negotiation, and follow-through that builds trust and closes deals."
   }
 ];
 
 const experienceItems = [
   {
+    company: "Hexavia Consulting",
+    role: "Client Relationship Manager",
+    date: "2025",
+    points: [
+      "Resolved customer complaints directly, improving trust, retention, and long-term brand relationships.",
+      "Nurtured leads from ads, referrals, and events into paying customers through clear communication.",
+      "Contributed to ₦30–40M in monthly sales through client engagement and deal-conversion strategy.",
+      "Closed high-value deals worth over ₦10M by understanding needs and communicating value clearly."
+    ]
+  },
+  {
+    company: "Hexavia Consulting",
+    role: "Executive Assistant to the COO",
+    date: "2025",
+    points: [
+      "Managed executive calendars, meetings, reminders, and schedules.",
+      "Coordinated recruitment, including job postings, screening, and interviews.",
+      "Acted as liaison between executives, internal teams, and external stakeholders.",
+      "Followed up on projects to keep deadlines and deliverables on track."
+    ]
+  },
+  {
     company: "Coxatech Digital Agency",
     role: "Social Media Manager",
-    date: "2024 - Present",
+    date: "2024 – Present",
     points: [
       "Develops social media campaigns that improved client engagement by 60% within three months.",
-      "Creates posts, short videos, and ad copy tailored to each audience.",
-      "Works with sales teams on persuasive campaign messaging for leads and conversion."
+      "Creates posts, short-form videos, and ad copy tailored to each audience.",
+      "Works with sales teams on persuasive messaging for lead generation and conversion."
     ]
   },
   {
     company: "African Origins Network",
-    role: "Social Media Marketer & Content Writer",
-    date: "Mar - Aug 2024",
+    role: "Content Writer / Social Media Marketer",
+    date: "2024",
     points: [
-      "Wrote SEO-focused blog posts, articles, and breaking-news updates that drove traffic.",
-      "Managed social pages and promoted digital stories to increase online visibility.",
-      "Partnered with editors and designers to keep story presentation clear and consistent."
+      "Wrote SEO-optimized blog posts, articles, and breaking news that drove significant traffic.",
+      "Managed social pages to grow online visibility and audience engagement.",
+      "Collaborated with editors and designers to align storytelling across platforms."
     ]
   },
   {
     company: "GlambyBaseBeauty",
-    role: "Content Strategist",
-    date: "Jan - Dec 2024",
+    role: "Content Strategist / Personal Assistant",
+    date: "2023 – 2024",
     points: [
-      "Planned beauty content ideas, testimonials, transformations, and campaign themes.",
-      "Built monthly content calendars around visibility, engagement, and customer trust.",
-      "Collaborated with the creative team on trend-aware social media content."
+      "Developed content strategies and customer personas to sharpen brand positioning and retention.",
+      "Built content calendars, beauty tips, testimonials, and promotional campaigns.",
+      "Managed appointments and client communications, supporting launches, masterclasses, and events."
     ]
+  },
+  {
+    company: "Esomelite Global Enterprises",
+    role: "Executive Secretary",
+    date: "2022",
+    points: [
+      "Managed calendars, appointments, emails, and walk-in clients professionally.",
+      "Maintained sales records, correspondence, and inventory documentation.",
+      "Assisted with financial records, payment tracking, and follow-ups."
+    ]
+  }
+];
+
+const tools = [
+  "Canva",
+  "CapCut",
+  "Meta Business Suite",
+  "Google Workspace",
+  "Google Analytics",
+  "Monday.com",
+  "Notion",
+  "ChatGPT",
+  "Microsoft Word",
+  "ClickUp"
+];
+
+const credentials = [
+  {
+    icon: GraduationCap,
+    label: "Education",
+    title: "Unique Open University",
+    detail: "Health Care Management — 2022 to Present"
+  },
+  {
+    icon: Award,
+    label: "Certification",
+    title: "HubSpot Academy",
+    detail: "Social Media Marketing Certification — 2025"
   }
 ];
 
 const caseNotes = [
   {
-    title: "Launch week support",
+    title: "Campaign & launch support",
     meta: "Content planning and inbox cover",
-    text: "A seven-day posting rhythm, prepared product answer templates, and customer questions grouped by priority."
+    text: "A steady posting rhythm, ready product answers, and customer questions grouped by priority so launches stay calm and on-message."
   },
   {
-    title: "Customer reply library",
-    meta: "Voice guide and response scripts",
-    text: "Repeated questions turned into saved replies that still sound human, with escalation notes for pricing, delivery, and refunds."
+    title: "Client relationships & sales",
+    meta: "Lead nurturing and deal conversion",
+    text: "Leads from ads, referrals, and events guided toward paying customers, with complaints handled early and value communicated clearly."
   },
   {
-    title: "Monthly page review",
-    meta: "Reporting and next actions",
-    text: "A practical review of post formats, audience questions, and message patterns to guide the next content focus."
+    title: "Executive support & operations",
+    meta: "Calendars, recruitment, and follow-up",
+    text: "Executive schedules kept tidy, hiring coordinated end to end, and project deadlines tracked so leadership can stay focused."
   }
 ];
 
-const responseExamples = [
+const communicationExamples = [
   {
     prompt: "A customer asks for a delivery update.",
     reply: "Hi Ada, thanks for checking in. Your order is already with dispatch, and I will confirm the delivery window with you before 4pm today."
   },
   {
-    prompt: "A follower wants product details before buying.",
-    reply: "Yes, this is available. The medium size fits 10 to 12 items comfortably. I can also send you the color options if you want to compare before ordering."
+    prompt: "A lead is weighing up before they commit.",
+    reply: "Happy to make this easy. Based on what you shared, the standard package covers everything you mentioned. I can send a short breakdown and hold your slot for 48 hours if that helps."
   },
   {
-    prompt: "A complaint needs a calm handoff.",
-    reply: "I am sorry this happened. I have shared the order number with the team lead and will stay on this thread until we have a clear next step for you."
+    prompt: "The COO needs a schedule sorted quickly.",
+    reply: "Done — I have moved the 2pm to Thursday, confirmed with both teams, and blocked prep time beforehand. Reminders are set and the agenda is in your inbox."
   }
 ];
 
 const daybookItems = [
-  "Morning inbox sweep",
-  "Caption and asset check",
-  "Comment moderation",
-  "Customer issue handoff",
-  "End-of-day notes"
+  "Inbox & message sweep",
+  "Content & caption check",
+  "Calendar & schedule review",
+  "Client & lead follow-up",
+  "Reporting & handoff notes"
 ];
 
 const processSteps = [
-  "Audit the current pages, inbox flow, saved replies, and brand voice.",
-  "Plan content and customer response priorities around the team's real capacity.",
-  "Publish, reply, document repeated questions, and flag urgent issues early.",
-  "Report what changed, what customers asked for, and where the next effort should go."
+  "Understand the goal: the brief, brand voice, audience, and the team or executive's real priorities.",
+  "Plan content, communications, and support tasks around actual capacity and deadlines.",
+  "Execute: publish, write, reply, coordinate schedules, and keep stakeholders aligned.",
+  "Report what moved — engagement, conversions, and where the next effort should go."
 ];
 
 function Header() {
@@ -142,7 +219,7 @@ function Header() {
       <nav aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#experience">Experience</a>
-        <a href="#work">Work style</a>
+        <a href="#toolkit">Toolkit</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -151,10 +228,10 @@ function Header() {
 
 function HeroVisual() {
   return (
-    <div className="hero-visual" role="img" aria-label="Campaign planning and customer-care dashboard preview">
+    <div className="hero-visual" role="img" aria-label="Content, communications, and executive-support operations preview">
       <div className="visual-topline">
         <span className="pulse-dot" aria-hidden="true" />
-        <span>Live care desk</span>
+        <span>Operations desk</span>
         <strong>Priority queue clear</strong>
       </div>
 
@@ -168,7 +245,7 @@ function HeroVisual() {
           </div>
           <div className="post-preview">
             <Instagram size={18} aria-hidden="true" />
-            <p>New product drop: caption ready, replies ready, team briefed.</p>
+            <p>Campaign live: copy ready, replies ready, team briefed.</p>
           </div>
           <div className="reaction-row">
             <span>24 comments</span>
@@ -181,7 +258,7 @@ function HeroVisual() {
             <CalendarDays size={18} aria-hidden="true" />
             <span>Week plan</span>
           </div>
-          {["Mon: Tips", "Wed: Reel", "Fri: Launch", "Sat: Replies"].map((item) => (
+          {["Mon: Content", "Wed: Exec sync", "Fri: Launch", "Sat: Follow-ups"].map((item) => (
             <div className="calendar-item" key={item}>
               <CheckCircle2 size={16} aria-hidden="true" />
               <span>{item}</span>
@@ -194,7 +271,7 @@ function HeroVisual() {
             <AtSign size={18} aria-hidden="true" />
             <span>Inbox queue</span>
           </div>
-          {["Delivery update", "Size question", "Thank-you note"].map((item, index) => (
+          {["Delivery update", "Lead follow-up", "COO calendar"].map((item, index) => (
             <div className="message-item" key={item}>
               <span className="message-avatar">{index + 1}</span>
               <span>{item}</span>
@@ -205,9 +282,9 @@ function HeroVisual() {
         <div className="chart-preview">
           <div className="preview-heading">
             <BarChart3 size={18} aria-hidden="true" />
-            <span>Response trend</span>
+            <span>Engagement trend</span>
           </div>
-          <svg viewBox="0 0 210 86" role="img" aria-label="Rising response activity chart">
+          <svg viewBox="0 0 210 86" role="img" aria-label="Rising engagement activity chart">
             <polyline points="8,67 40,58 72,62 104,38 136,46 168,24 202,18" />
             <circle cx="202" cy="18" r="5" />
           </svg>
@@ -222,10 +299,10 @@ function Services() {
     <section className="section services-section" id="services">
       <div className="section-copy">
         <p className="section-kicker">What she handles</p>
-        <h2>Reliable content flow and careful customer conversations.</h2>
+        <h2>Content, communication, client care, and executive support — under one roof.</h2>
         <p>
-          Favour supports the public side of a brand and the private messages behind it:
-          posts, comments, DMs, response notes, and the small details that shape trust.
+          Favour combines creativity with structure: she shapes the public voice of a brand,
+          keeps the private conversations warm, and holds the operations behind them together.
         </p>
       </div>
 
@@ -250,7 +327,7 @@ function Experience() {
         <div className="profile-card-copy">
           <p className="section-kicker">Resume snapshot</p>
           <h2>Favour Uche-Gabriel</h2>
-          <p>Social Media Marketer | Content Strategist | Digital Storyteller</p>
+          <p>{roleTitle}</p>
         </div>
 
         <div className="profile-links" aria-label="Favour Uche-Gabriel contact details">
@@ -280,15 +357,15 @@ function Experience() {
 
       <div className="experience-copy">
         <p className="section-kicker">Experience</p>
-        <h2>Hands-on social media work across tech, media, and beauty.</h2>
+        <h2>One track record across content, clients, and operations.</h2>
         <p>
-          Her experience is focused on building content plans, writing clear copy,
-          managing brand pages, and keeping campaigns organized enough to convert attention into action.
+          Six roles across media, beauty, tech, and consulting — from managing brand pages and
+          writing SEO content to closing high-value deals and running an executive's calendar.
         </p>
 
         <div className="experience-list">
           {experienceItems.map((item) => (
-            <article className="experience-item" key={item.company}>
+            <article className="experience-item" key={`${item.company}-${item.role}`}>
               <div className="experience-heading">
                 <div>
                   <p>{item.date}</p>
@@ -315,14 +392,14 @@ function Daybook() {
     <section className="daybook-section" aria-labelledby="daybook-title">
       <div className="daybook-copy">
         <p className="section-kicker">A working day</p>
-        <h2 id="daybook-title">What gets checked before the page goes quiet.</h2>
+        <h2 id="daybook-title">What gets checked before anything slips.</h2>
         <p>
-          The value is in the small passes: catching repeated questions, keeping comments tidy,
-          making sure posts have context, and leaving useful notes for the business owner.
+          The value is in the small passes: catching repeated questions, keeping the calendar honest,
+          following up with clients, and leaving useful notes for the team or executive.
         </p>
       </div>
 
-      <div className="daybook-board" aria-label="Daily social media and customer-care checklist">
+      <div className="daybook-board" aria-label="Daily content, communications, and support checklist">
         {daybookItems.map((item, index) => (
           <div className="daybook-item" key={item}>
             <span>{String(index + 1).padStart(2, "0")}</span>
@@ -340,23 +417,23 @@ function WorkStyle() {
       <div className="work-inner">
         <div className="section-copy inverted">
           <p className="section-kicker">Work style</p>
-          <h2>Organized enough for campaigns. Human enough for customers.</h2>
+          <h2>Organized enough for executives. Creative enough for content.</h2>
           <p>
-            Social channels move fast, but the tone should not feel rushed. Favour keeps
-            the page active, the inbox tidy, and the team aware of what customers are asking.
+            Channels, inboxes, and calendars all move fast, but the tone should never feel rushed.
+            Favour keeps the work active, the details tracked, and everyone aware of what matters next.
           </p>
         </div>
 
         <div className="standards">
           <div>
             <ShieldCheck size={24} aria-hidden="true" />
-            <h3>Brand voice guardrails</h3>
-            <p>Clear reply patterns for greetings, complaints, product questions, and follow-ups.</p>
+            <h3>Clear communication guardrails</h3>
+            <p>Consistent voice across posts, client replies, complaints, and executive correspondence.</p>
           </div>
           <div>
             <Clock3 size={24} aria-hidden="true" />
-            <h3>Prompt response rhythm</h3>
-            <p>Inbox checks grouped around priority, urgency, and the kind of answer needed.</p>
+            <h3>Reliable follow-through</h3>
+            <p>Schedules, deadlines, and deliverables tracked so commitments do not slip.</p>
           </div>
         </div>
       </div>
@@ -369,7 +446,7 @@ function Process() {
     <section className="section process-section">
       <div className="section-copy">
         <p className="section-kicker">How she works</p>
-        <h2>A clear operating loop for social media and customer care.</h2>
+        <h2>A clear operating loop from brief to results.</h2>
       </div>
 
       <ol className="process-list">
@@ -389,7 +466,7 @@ function CaseNotes() {
     <section className="section case-section">
       <div className="section-copy">
         <p className="section-kicker">Selected work themes</p>
-        <h2>Practical support for pages that need consistency and care.</h2>
+        <h2>Practical support across the brand, the client, and the back office.</h2>
       </div>
 
       <div className="case-list">
@@ -405,16 +482,50 @@ function CaseNotes() {
   );
 }
 
-function ResponseExamples() {
+function Toolkit() {
+  return (
+    <section className="toolkit-section" id="toolkit">
+      <div className="section-copy">
+        <p className="section-kicker">Toolkit & credentials</p>
+        <h2>The tools and training behind the work.</h2>
+        <p>
+          Day-to-day, Favour works across content, publishing, analytics, and project tools,
+          backed by focused training in marketing and healthcare management.
+        </p>
+      </div>
+
+      <div className="toolkit-body">
+        <div className="tool-chips" aria-label="Tools Favour works with">
+          {tools.map((tool) => (
+            <span className="chip" key={tool}>{tool}</span>
+          ))}
+        </div>
+
+        <div className="credentials">
+          {credentials.map(({ icon: Icon, label, title, detail }) => (
+            <article className="credential-card" key={title}>
+              <Icon size={22} aria-hidden="true" />
+              <p>{label}</p>
+              <h3>{title}</h3>
+              <span>{detail}</span>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CommunicationSamples() {
   return (
     <section className="response-section" aria-labelledby="response-title">
       <div className="section-copy">
-        <p className="section-kicker">Reply samples</p>
-        <h2 id="response-title">Customer care that sounds clear, not canned.</h2>
+        <p className="section-kicker">Communication samples</p>
+        <h2 id="response-title">One voice, tuned to customers, leads, and leadership.</h2>
       </div>
 
       <div className="response-list">
-        {responseExamples.map((example) => (
+        {communicationExamples.map((example) => (
           <article className="response-note" key={example.prompt}>
             <p>{example.prompt}</p>
             <blockquote>{example.reply}</blockquote>
@@ -432,11 +543,11 @@ function Contact() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const name = formData.get("name")?.toString().trim() || "A portfolio visitor";
-    const company = formData.get("company")?.toString().trim() || "a business page";
-    const message = formData.get("message")?.toString().trim() || "I would like to discuss social media and customer-care support.";
+    const company = formData.get("company")?.toString().trim() || "a business or team";
+    const message = formData.get("message")?.toString().trim() || "I would like to discuss content, communications, or executive-support work.";
     const params = new URLSearchParams({
       subject: `Portfolio inquiry from ${name}`,
-      body: `Name: ${name}\nCompany or page: ${company}\n\n${message}`
+      body: `Name: ${name}\nCompany or team: ${company}\n\n${message}`
     });
 
     setSent(true);
@@ -447,10 +558,10 @@ function Contact() {
     <section className="contact-section" id="contact">
       <div className="contact-copy">
         <Sparkles size={28} aria-hidden="true" />
-        <h2>Need a steady hand on your social pages?</h2>
+        <h2>Need content, communications, or a steady right hand?</h2>
         <p>
-          Share the channel, customer-care need, or campaign you want support with.
-          Favour can help turn scattered posts and messages into a manageable routine.
+          Share the brand, campaign, customer-care need, or executive support you want help with.
+          Favour can turn scattered posts, messages, and schedules into a manageable routine.
         </p>
       </div>
 
@@ -460,7 +571,7 @@ function Contact() {
           <input type="text" name="name" autoComplete="name" required />
         </label>
         <label>
-          Company or page
+          Company or team
           <input type="text" name="company" autoComplete="organization" required />
         </label>
         <label>
@@ -487,7 +598,8 @@ function Footer() {
       </a>
       <div className="footer-links">
         <a href="#services">Services</a>
-        <a href="#work">Work style</a>
+        <a href="#experience">Experience</a>
+        <a href="#toolkit">Toolkit</a>
         <a href={resumeHref} download>Resume</a>
         <a href="#contact">
           <Mail size={16} aria-hidden="true" />
@@ -505,11 +617,11 @@ export default function App() {
       <main id="top">
         <section className="hero-section" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="hero-kicker">Social media and customer care</p>
-            <h1 id="hero-title">Favour Uche-Gabriel keeps brands active, kind, and easy to reach.</h1>
+            <p className="hero-kicker">Content · Communications · Executive support</p>
+            <h1 id="hero-title">Favour Uche-Gabriel keeps content sharp, clients close, and operations calm.</h1>
             <p>
-              She plans content, manages social conversations, supports customers, and
-              turns everyday questions into a clearer brand experience.
+              A multidisciplinary specialist across content strategy, social media, client relations,
+              and executive support — combining creativity with structure to move brands and leaders forward.
             </p>
             <div className="hero-actions">
               <a className="button primary" href="#contact">
@@ -534,7 +646,8 @@ export default function App() {
         <Daybook />
         <Process />
         <CaseNotes />
-        <ResponseExamples />
+        <Toolkit />
+        <CommunicationSamples />
         <Contact />
       </main>
       <Footer />

@@ -6,15 +6,15 @@ brand
 
 ## Users
 
-Potential employers, small business owners, founders, and team leads who need help with social media operations and customer conversations. They are scanning quickly for trust, communication range, and evidence that Favour can organize public posts and private customer care without dropping detail.
+Potential employers, small business owners, founders, and team leads who need help across content, communications, client relations, and executive support. They are scanning quickly for trust, communication range, and evidence that Favour can carry public content, private client care, and back-office operations without dropping detail.
 
 ## Product Purpose
 
-This portfolio introduces Favour Uche-Gabriel as a social media manager and customer representative agent. Success means a visitor understands what she handles, sees how she thinks about campaigns and customer replies, and has a direct way to start a conversation.
+This portfolio introduces Favour Uche-Gabriel as a Content, Communications & Executive Support Specialist — one person who can shape a brand's content, manage its social channels and client relationships, and keep the operations behind them running. Success means a visitor understands the full range she handles, sees how she thinks across campaigns, customer replies, and executive support, and has a direct way to start a conversation.
 
 ## Brand Personality
 
-Bright, composed, responsive. The voice should feel warm and precise: friendly enough for community work, organized enough for brand operations, and calm under customer pressure.
+Bright, composed, responsive. The voice should feel warm and precise: creative enough for content and community work, organized enough for brand and executive operations, and calm under client pressure.
 
 ## Anti-references
 

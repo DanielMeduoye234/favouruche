@@ -772,6 +772,75 @@ textarea:focus-visible {
   padding: 1.35rem;
 }
 
+.toolkit-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(19rem, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  padding: clamp(4rem, 7vw, 7rem) clamp(1rem, 4vw, 4.5rem);
+  background:
+    linear-gradient(180deg, oklch(0.976 0.01 206), var(--white));
+}
+
+.toolkit-body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.tool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  padding: 0.55rem 0.95rem;
+  color: var(--ink);
+  font-weight: 750;
+  font-size: 0.98rem;
+}
+
+.credentials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.credential-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 1.25rem;
+}
+
+.credential-card svg {
+  color: var(--primary-strong);
+}
+
+.credential-card p {
+  margin: 0.85rem 0 0;
+  color: var(--accent);
+  font-weight: 850;
+}
+
+.credential-card h3 {
+  margin: 0.35rem 0 0;
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.credential-card span {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
 .response-section {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(19rem, 1fr);
@@ -925,6 +994,7 @@ textarea:focus-visible {
   .work-inner,
   .process-section,
   .daybook-section,
+  .toolkit-section,
   .response-section,
   .contact-section {
     grid-template-columns: 1fr;
